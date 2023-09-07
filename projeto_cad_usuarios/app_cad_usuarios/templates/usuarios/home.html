@@ -6,6 +6,21 @@
     <title>Cadastre-me</title>
 </head>
 <body>
-    <h1>Cadastre-me!</h1>
+    <nav style="background-color: rgb(9, 199, 247) !important;" class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Cadastre-me</span>
+        </div>
+      </nav>
+      <form action="{% url 'listagem_usuarios' %}" method="post">
+        {% csrf_token %}
+        <div style="text-align: center;" class="conteiner">  
+            <h1>Cadastro de Usuários</h1>
+            Nome <input name="nome" class="from-control-sm" type="text">
+            Idade <input name="idade" class="from-control-sm" type="text">
+            <button class="from-control-sm">Enviar</button>
+        </div>
+      </form>
+
+
 </body>
 </html>
